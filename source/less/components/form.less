@@ -1,0 +1,72 @@
+.form {
+  padding-bottom: 32px;
+}
+.form__group {
+  padding: 0;
+  margin-bottom: 45px;
+  border: none;
+}
+.form__group-label {
+  margin-bottom: 13px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: normal;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+.form__group--programs {
+  color: @textgrey;
+}
+
+.form__group-row {
+  margin-bottom: 13px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.form__group--programs > .form__group-label, .form__group--information > .form__group-label {
+  display: block;
+  margin-bottom: 13px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.form__group--programs > .form__group-label > .form__group-mark {
+    position: relative;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: 15px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #CDCDCD;
+    border-radius: 50%
+}
+ .form__group--information > .form__group-label > .form__group-mark {
+    position: relative;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #CDCDCD;
+ }
+.form__group-title {
+  margin-bottom: 35px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 26px;
+}
+.form__group-description,
+.form__group-input {
+  font-family: 'Oswald', sans-serif;
+  font-weight: normal;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: @darkgrey;
+}
+.form__group-legend {
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+}
