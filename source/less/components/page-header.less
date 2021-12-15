@@ -1,15 +1,36 @@
 .page-header {
   display: flex;
   justify-content: space-between;
-  padding: 17px 20px 10px;
-}
+  padding: 10px 20px 17px;
 
+  @media (min-width: @tablet-width) {
+    padding: 42px 30px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 64px 110px 0;
+  }
+}
 .page-header__link {
   display: flex;
   text-decoration: none;
   color: @black;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 90px;
+  }
 }
 
 .page-header__link-logo {
   margin-right: 57px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 10px;
+  }
 }
+
+.page-header__link-logoname {
+  align-self: center;
+}
+
+

@@ -1,31 +1,96 @@
 .example {
-  padding: 25px 20px 40px;
+  position: relative;
+  z-index: 1;
+  padding-top: 23px;
+  padding-bottom: 40px;
   background-color: @lightgrey;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 65px;
+    padding-bottom: 55px;
+    background-color: @white;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 650px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: @lightgrey;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 65px;
+    padding-bottom: 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 80px;
+
+    &::before {
+      top: 200px;
+    }
+  }
 }
 
 .example__title {
+  margin: 0;
   margin-bottom: 40px;
   font-size: 36px;
   line-height: 40px;
-  text-align: center;
+  font-weight: 400;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 63px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 150px;
+
+  }
 }
 
 .example__content {
+  margin: 0;
   font-family: "Arial", "Helvetica", sans-serif;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   line-height: 18px;
   color: @darkgrey;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 70px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+   width: 436px;
+  }
 }
 
 .example__statistics {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 365px;
+    display: flex;
+  }
 }
 
 .example__statistics-description {
-  margin-bottom: 9px;
   font-size: 24px;
+  text-transform: uppercase;
 
   &:nth-child(2) {
     margin-bottom: 0;
@@ -33,27 +98,148 @@
     font-size: 12px;
     line-height: 12px;
     color: @darkgrey;
+    text-transform: none;
   }
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+
+    &:nth-child(2) {
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
+
 }
 
-.example__expenses {
+.example__statistics-expenses{
+  margin: 0;
   margin-bottom: 40px;
   line-height: 20px;
   text-transform: uppercase;
-  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    width: 174px;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .example__statistics-column {
+  margin-bottom: 20px;
   width: 124px;
-  padding-top: 15px;
   text-align: center;
-}
 
-.example__slider-img--after {
-  display: none;
+  &:first-child {
+    margin-right: 32px;
+  }
+
+  @media (min-width: @tablet-width) {
+   &:first-child {
+     margin-right: 0;
+   }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 55px;
+   }
+
 }
 
 .example__toggle {
   display: flex;
-  justify-content: center;
+  width: 210px;
+  justify-content: space-between;
+  margin:0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 592px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.example__toggle-label {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.example__toggle-scale {
+  align-self: center;
+}
+.example__toggle-button {
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: 35px;
+  height: 6px;
+  background-color: @green;
+  border: none;
+  border-radius: 6px;
+
+  @media (min-width: @tablet-width) {
+    left: 200px;
+    top: -15px;
+    width: 33.84px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: @white;
+    filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.16));
+  }
+}
+
+.example__slider-img--after{
+  display: none;
+}
+
+.example__slider-wrapper {
+  text-align: center;
+}
+
+.example__statistics-expenses-wrapper {
+  display: flex;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: column;
+    text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .example__slider-img--before img {
+    width: 592px;
+    height: 511px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .example__inner{
+    margin-bottom: 80px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .example__slide {
+    right: 60px;
+    top: 115px;
+  }
 }

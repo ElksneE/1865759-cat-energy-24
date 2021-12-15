@@ -1,28 +1,66 @@
+.page-footer {
+  position: relative;
+}
+
 .page-footer__contacts {
   display: flex;
   justify-content: space-between;
-  padding-top: 26px;
+  padding-top: 36px;
   padding-bottom: 28px;
   background: @basicgrey;
+
+  @media (min-width: @tablet-width) {
+    background: @white;
+    padding: 76px 72px 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    padding: 62px 89px 51px 76px;
+    top: 36px;
+    right: 835px;
+    z-index: 1;
+  }
 }
 
 .page-footer__contacts-description {
+  margin-right: 25px;
   font-weight: normal;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    width: 171px;
+    font-size: 20px;
+    line-height: 21px;
+  }
 }
 
 .page-footer__contacts-address {
   font-family: "Arial", "Helvetica", sans-serif;
   line-height: 20px;
   color: @darkgrey;
+
+  @media (min-width: @tablet-width) {
+    text-align: right;
+    width: 160px;
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .page-footer__social {
   padding-top: 39px;
   padding-bottom: 22px;
   background: @lightgrey;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 56px;
+    padding-bottom: 57px;
+  }
 }
 
 .page-footer__logo {
@@ -58,9 +96,46 @@
   }
 }
 
+.page-footer__html-name {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: @darkgrey;
+
+  @media (min-width: @tablet-width) {
+   margin-right: 22px;
+   align-self: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
 .page-footer__html-link {
+  text-decoration: none;
   display: flex;
   justify-content: space-between;
-  text-decoration: none;
-  color: @black;
 }
+.page-footer__map {
+  position:relative;
+  overflow:hidden;
+  padding-bottom:50%;
+  height:0;
+
+  @media (min-width: @desktop-width) {
+    padding-bottom:30%;
+  }
+
+}
+.page-footer__map iframe {
+  position:absolute;
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+}
+
+

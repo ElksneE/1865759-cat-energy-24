@@ -1,11 +1,13 @@
 .button {
-  width: 280px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  line-height: 18px;
+  font-family: "Oswald", sans-serif;
+  padding: 10px 0;
   text-align: center;
   text-transform: uppercase;
   color: @white;
   background: @green;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    padding: 14px 0;
+  }
 }
