@@ -16,11 +16,20 @@
   @media (min-width: @desktop-width) {
       padding-left: 190px;
       margin-bottom: 275px;
+      max-width: 1440px;
+      margin-left: auto;
+      margin-right: auto;
   }
 }
 .programs__button {
+  display: block;
   width: 100%;
   font-weight: 400;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  outline: 0px;
+  text-decoration: none;
 
   @media (min-width: @tablet-width) {
     width: 244px;
@@ -37,6 +46,7 @@
     z-index: -1;
     content: "";
     position: absolute;
+    display: block;
     top: 0;
     bottom: -164px;
     left: 0;
@@ -74,17 +84,21 @@
 
   @media (min-width: @desktop-width) {
     padding-left: 190px;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
 
     &::before {
-      // width: calc(100%/2 - 40px);
       top: -190px;
       left: 50%;
       height: 696px;
       background-image: linear-gradient(to left, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("/img/main/background-desktop.jpg");
       background-repeat: no-repeat;
-
       background-position: top right;
       background-size: cover;
+      width: calc(100%/2 - 40px);
+    background-size: 680px auto;
+    background-position: right bottom;
     }
 
   }

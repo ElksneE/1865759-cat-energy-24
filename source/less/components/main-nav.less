@@ -26,7 +26,6 @@
   @media (min-width: @desktop-width) {
     font-size: 20px;
     line-height: 30px;
-    color: @white;
   }
 }
 
@@ -49,7 +48,7 @@
 
 @media (min-width: @tablet-width) {
   .main-nav__toggle {
-   display: none;
+    display: none;
   }
 }
 
@@ -59,5 +58,20 @@
   @media (min-width: @tablet-width) {
     width: 440px;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 483px;
+  }
 }
 
+@media (min-width: @desktop-width) {
+  .main-nav__item-link--form {
+    color: @black;
+  }
+}
+
+.main-nav__item-link--catalog {
+  @media (min-width: @desktop-width) {
+    color: @black;
+  }
+}
