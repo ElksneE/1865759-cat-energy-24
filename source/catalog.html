@@ -3,6 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+      <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="152x152" href="./img/favicons/favicon-152.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicons/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicons/favicon-16.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,7 +46,7 @@
           </svg>
         </div>
         <div class="page-header__link-logoname">
-          <svg width="128" height="24" viewBox="0 0 128 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <svg width="101" height="18" viewBox="0 0 128 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <rect width="128" height="24" fill="url(#pattern0)"/>
             <defs>
             <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
@@ -52,30 +57,30 @@
           </svg>
         </div>
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button">
-          <img src="/img/icon/menu.png" alt="" width="24" height="16">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <ul class="main-nav__list main-nav__list--catalog">
-          <li class="main-nav__item main-nav__item--current">
-            <a class="main-nav__item-link main-nav__item-link--catalog">
-              Главная
-            </a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__item-link main-nav__item-link--catalog" href="catalog.html">
-              Каталог продукции
-            </a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__item-link main-nav__item-link--catalog" href="form.html">
-              Подбор программы
-            </a>
-          </li>
-        </ul>
+          <ul class="main-nav__list">
+            <li class="main-nav__item main-nav__item--current">
+              <a class="main-nav__item-link main-nav__item-link--catalog">
+                Главная
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__item-link main-nav__item-link--catalog" href="catalog.html">
+                Каталог продукции
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__item-link main-nav__item-link--catalog" href="form.html">
+                Подбор программы
+              </a>
+            </li>
+          </ul>
       </nav>
     </header>
+
     <main class="page-catalog">
       <div class="page-catalog-wrapper container">
         <h1 class="page-catalog__title">Каталог продукции</h1>
@@ -273,8 +278,8 @@
                 </svg>
             </div>
             <h3 class="catalog__item-subtitle catalog__item-subtitle--show-more">Показать еще 100500 товаров</h3>
-            <p class="catalog__item-text catalog__item-text--show-more" >На самом деле вкусов гораздо больше!</p>
-            <button class="catalog__item-button catalog__item-button--show-more button">Показать все</button>
+            <p class="catalog__item-subtitle-text">На самом деле вкусов гораздо больше!</p>
+            <button class="catalog__item-button catalog__item-button--show-more">Показать все</button>
           </div>
         </div>
       </section>
@@ -423,5 +428,22 @@
           </div>
         </div>
       </footer>
+      <script>
+        var navMain = document.querySelector('.main-nav');
+        var navToggle = document.querySelector('.main-nav__toggle');
+
+        navMain.classList.remove('main-nav--nojs');
+
+        navToggle.addEventListener('click', function() {
+          if (navMain.classList.contains('main-nav--closed')) {
+            navMain.classList.remove('main-nav--closed');
+            navMain.classList.add('main-nav--opened');
+          } else {
+            navMain.classList.add('main-nav--closed');
+            navMain.classList.remove('main-nav--opened');
+          }
+        });
+      </script>
+
   </body>
 </html>

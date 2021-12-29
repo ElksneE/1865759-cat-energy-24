@@ -1,11 +1,18 @@
 .button {
-  font-family: "Oswald", sans-serif;
   padding: 10px 0;
   text-align: center;
   text-transform: uppercase;
   color: @white;
   background: @green;
   border: none;
+
+  &:hover {
+    background: @greenhover;
+  }
+
+  &:active {
+    color: rgba(255,255, 255, 0.3);
+  }
 
   @media (min-width: @tablet-width) {
     padding: 14px 0;

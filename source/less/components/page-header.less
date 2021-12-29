@@ -1,5 +1,6 @@
 .page-header {
   width: 100%;
+  min-height: 38px;
   display: flex;
   justify-content: space-between;
   padding: 10px 20px 17px;
@@ -21,6 +22,14 @@
   text-decoration: none;
   color: @black;
 
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active  {
+    opacity: 0.6;
+  }
+  
   @media (min-width: @tablet-width) {
     margin-right: 90px;
   }
@@ -37,5 +46,3 @@
 .page-header__link-logoname {
   align-self: center;
 }
-
-

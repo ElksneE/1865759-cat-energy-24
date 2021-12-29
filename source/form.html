@@ -3,6 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+      <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="152x152" href="./img/favicons/favicon-152.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicons/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicons/favicon-16.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,28 +57,27 @@
           </svg>
         </div>
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button">
-          <img src="/img/icon/menu.png" alt="" width="24" height="16">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <ul class="main-nav__list main-nav__list--form">
-          <li class="main-nav__item main-nav__item--current">
-            <a class="main-nav__item-link main-nav__item-link--form">
-              Главная
-            </a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__item-link main-nav__item-link--form" href="catalog.html">
-              Каталог продукции
-            </a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__item-link main-nav__item-link--form" href="form.html">
-              Подбор программы
-            </a>
-          </li>
-        </ul>
+          <ul class="main-nav__list main-nav__list--form">
+            <li class="main-nav__item main-nav__item--current">
+              <a class="main-nav__item-link main-nav__item-link--form" href="index.html">
+                Главная
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__item-link main-nav__item-link--form" href="catalog.html">
+                Каталог продукции
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__item-link main-nav__item-link--form">
+                Подбор программы
+              </a>
+            </li>
+          </ul>
       </nav>
     </header>
     <main class="page-inner">
@@ -132,24 +136,35 @@
 
         <!-- Форма контактные данные -->
         <fieldset class="form__group form__group--contact">
-          <legend class="form__group-title form__group-title--contact">Контактные данные (владельца кота)</legend>
-          <div class="form__group-row">
-            <label class="form__group-label" for="email" >E-mail:*</label>
-            <input class="form__group-input" type="email"  id="email" name="email" placeholder="kuklachev@gmail.com">
+          <div class="form__group-title-wrapper">
+            <legend class="form__group-title form__group-title--contact">Контактные данные (владельца кота)</legend>
           </div>
-          <div class="form__group-row">
-            <label class="form__group-label" for="tel" >Телефон:*</label>
-            <input class="form__group-input" type="tel"  id="tel" name="tel" placeholder="8 (960) 900-60-90">
+          <div class="form__group-row-wrapper">
+            <div class="form__group-row form__group-row--contact">
+              <label class="form__group-label" for="email" >E-mail:*</label>
+              <input class="form__group-input form__group-input--email" type="email"  id="email" name="email" placeholder="kuklachev@gmail.com">
+              <span class="form__group-icon form__group-icon--email"></span>
+            </div>
+            <div class="form__group-row form__group-row--contact">
+              <label class="form__group-label" for="tel" >Телефон:*</label>
+              <input class="form__group-input form__group-input--phone" type="tel"  id="tel" name="tel" placeholder="8 (960) 900-60-90">
+              <span class="form__group-icon form__group-icon--phone"></span>
+            </div>
           </div>
+
         </fieldset>
         <!-- Форма комментарий -->
         <fieldset class="form__group form__group--comment">
-          <legend class="form__group-title form__group-title--comment">Комментарий</legend>
+          <div class="form__group-title-wrapper">
+            <legend class="form__group-title form__group-title--comment">Комментарий</legend>
+          </div>
           <textarea class="form__group-description" name="comment" id="comment" cols="30" rows="7" placeholder="Расскажите обо всех повАдках кота"></textarea>
         </fieldset>
         <!-- Форма Дополнительно -->
         <fieldset class="form__group form__group--information">
-          <legend class="form__group-title form__group-title--information">Дополнительно</legend>
+          <div class="form__group-title-wrapper">
+            <legend class="form__group-title form__group-title--information">Дополнительно</legend>
+          </div>
           <div class="form__group-label-wrapper">
             <label class="form__group-label form__group-label--information">
               <input class="visually-hidden" type="radio" name="product-group">
@@ -258,5 +273,22 @@
         </div>
       </div>
     </footer>
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
+
   </body>
 </html>

@@ -26,7 +26,7 @@
   background: @basicgrey;
 
   @media (min-width: @desktop-width) {
-   background: @white;
+    background: @white;
   }
 }
 
@@ -66,6 +66,7 @@
 .page-footer__social-wrapper {
   background: @lightgrey;
 }
+
 .page-footer__social {
   padding-top: 20px;
   padding-bottom: 22px;
@@ -78,14 +79,14 @@
   }
 
   @media (min-width: @desktop-width) {
-   width: 1440px;
-   margin-left: auto;
-   margin-right: auto;
+    width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
 .page-footer__logo {
-  margin-bottom: 52px;
+  margin-bottom: 31px;
 }
 
 .page-footer__logo-link {
@@ -93,6 +94,14 @@
   text-align: center;
   text-decoration: none;
   color: @black;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .page-footer__social-list {
@@ -101,12 +110,40 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
-  margin-bottom: 52px;
+  margin-bottom: 31px;
+  padding: 21px 0;
+  border-bottom: 1px solid #d9d9d9;
+  border-top: 1px solid #d9d9d9;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    padding: 0;
+    border: 0;
+  }
 }
 
 .page-footer__social-link {
   text-decoration: none;
   color: @black;
+}
+
+.page-footer__social-link:hover path {
+  fill: @green;
+}
+
+.page-footer__social-link:active path {
+  fill: @green;
+  opacity: 0.3;
+}
+
+.page-footer__html-logo:hover path {
+  fill: @green;
+}
+
+
+.page-footer__html-logo:active path {
+  fill: @green;
+  opacity: 0.3;
 }
 
 .page-footer__social-item {
@@ -119,15 +156,15 @@
 
 .page-footer__html-name {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
   color: @darkgrey;
 
   @media (min-width: @tablet-width) {
-   margin-right: 22px;
-   align-self: center;
+    margin-right: 22px;
+    align-self: center;
   }
 
   @media (min-width: @desktop-width) {
@@ -135,31 +172,33 @@
     line-height: 18px;
   }
 }
+
 .page-footer__html-link {
   text-decoration: none;
   display: flex;
   justify-content: space-between;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
+
 .page-footer__map {
-  position:relative;
-  overflow:hidden;
-  padding-bottom:120%;
-  height:0;
+  position: relative;
+  overflow: hidden;
+  height: 362px;
 
   @media (min-width: @tablet-width) {
-    padding-bottom:50%;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-bottom:30%;
+    height: 400px;
   }
 }
+
 .page-footer__map iframe {
-  position:absolute;
-  left:0;
-  top:0;
-  height:100%;
-  width:100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .page-footer__contacts--catalog {
