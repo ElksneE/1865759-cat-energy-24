@@ -23,7 +23,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 80px;
+    padding-top: 72px;
 
     &::before {
       top: 200px;
@@ -46,7 +46,7 @@
 
   @media (min-width: @desktop-width) {
     margin-bottom: 150px;
-    max-width: 1440px;
+    max-width: 1240px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -55,7 +55,7 @@
 .example__content {
   margin: 0;
   font-family: "Arial", "Helvetica", sans-serif;
-  margin-bottom: 30px;
+  margin-bottom: 21px;
   line-height: 18px;
   color: @darkgrey;
 
@@ -162,19 +162,19 @@
   display: flex;
   justify-content: space-between;
   width: 280px;
-  margin-bottom: 34px;
+  margin-bottom: 33px;
 
   @media (min-width: @tablet-width) {
     width: 366px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 50px;
+    margin-bottom: 60px;
   }
 }
 
 .example__statistics-column {
-  padding: 15px 20px 18px;
+  padding: 10px 20px 10px;
   width: 124px;
   text-align: center;
   border: 1px solid #cdcdcd;
@@ -224,6 +224,7 @@
   background-color: @green;
   border: none;
   border-radius: 6px;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     left: 200px;
@@ -240,7 +241,12 @@
 }
 
 .example__slider-wrapper {
+  margin-bottom: 17px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .example__statistics-expenses-wrapper {
@@ -262,7 +268,7 @@
   .example__wrapper {
     display: flex;
     justify-content: space-between;
-    max-width: 1440px;
+    max-width: 1240px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -275,15 +281,21 @@
   }
 }
 
-@media (min-width: @tablet-width) {
-  .example__inner {
-    margin-bottom: 80px;
+.example__inner {
+  @media (min-width: @tablet-width) {
+      margin-bottom: 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
   }
 }
 
-@media (min-width: @tablet-width) {
-  .example__slide {
-    right: 60px;
-    top: 115px;
+@media (min-width: @desktop-width) {
+  .example__slider {
+    position: absolute;
+    top: 54px;
+    right: 109px;
   }
 }
+

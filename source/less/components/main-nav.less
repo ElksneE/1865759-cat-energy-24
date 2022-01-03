@@ -1,7 +1,7 @@
 .main-nav__toggle {
   position: absolute;
   top: -11px;
-  right: 24px;
+  right: 0;
   z-index: 2;
   display: block;
   width: 24px;
@@ -33,7 +33,7 @@
     left: -24px;
     width: 17px;
     height: 20px;
-    background-image: url("/img/icon/cross.svg");
+    background-image: url("../img/icon/cross.svg");
     background-repeat: no-repeat;
   }
 }
@@ -59,7 +59,7 @@
 
 .main-nav__list {
   position: absolute;
-  top: 39px;
+  top: 30px;
   right: -20px;
   z-index: 2;
   margin: 0;
@@ -102,6 +102,7 @@
 
   @media (min-width: @tablet-width) {
     border: 0;
+    padding: 0;
   }
 }
 
@@ -124,6 +125,10 @@
     border-bottom: 2px solid @green;
   }
 
+  @media (min-width: @tablet-width) {
+    font-weight: 400;
+  }
+
   @media (min-width: @desktop-width) {
     color: @white;
 
@@ -142,6 +147,48 @@
   }
 }
 
+.main-nav__item-link--current {
+  &:hover {
+    opacity: 1;
+  }
+
+  &:focus {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 1;
+    color: @black;
+    border-bottom: none;
+  }
+
+  @media (min-width: @desktop-width) {
+
+    &:active {
+      color: @white;
+      border-bottom: none;
+    }
+  }
+}
+
+.main-nav__item-link.main-nav__item-link--form,
+.main-nav__item-link.main-nav__item-link--catalog {
+  @media (min-width: @desktop-width) {
+    &:active {
+      color: @black;
+      border-bottom: 2px solid #68B738;
+    }
+  }
+}
+.main-nav__item-link--current.main-nav__item-link--catalog {
+
+  @media (min-width: @desktop-width) {
+    &:active {
+      color: @black;
+      border-bottom: none;
+    }
+  }
+}
 @media (min-width: @tablet-width) {
   .main-nav__toggle {
     display: none;

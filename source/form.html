@@ -15,36 +15,12 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <a class="page-header__link">
-        <div class="page-header__link-logo">
-          <svg width="34" height="38" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#a)">
-              <path
-                d="M6.07 20.72v-2.26a143.265 143.265 0 0 1 20.17-1.33c0 .6 0 1.21-.06 1.82a25.518 25.518 0 0 1 6-1.82A16.67 16.67 0 0 0 .19 20.39l5.88.33ZM27.24 24.23c-1.16 1.28-1.39 1.2-1.39 3.45v9.18A16.64 16.64 0 0 0 33.32 23a17.302 17.302 0 0 0-.32-3.1 33.109 33.109 0 0 0-5.76 4.33ZM6.36 25.72s-3.79-1.44-5.19-1.83A8.541 8.541 0 0 0 0 23.61a16.65 16.65 0 0 0 8.68 14L6.36 25.72Z"
-                fill="#FDC305" />
-              <path
-                d="M26.29 17.12A89.799 89.799 0 0 0 24.89.65S24.75-.64 24 .41a14.22 14.22 0 0 0-1.2 3.94 70.34 70.34 0 0 0-12.77.34C9.24 2 7.85.75 7.18 1c-.67.25-.72 3.31-.72 3.31l-.33 14.1a143.211 143.211 0 0 1 20.16-1.29Z"
-                fill="#F06351" />
-              <path
-                d="M12.41 14c0-.09 1 .68 1.41.92.41.24.61.42.61.59 0 .17-.27.34-.63.34s-.91-.12-1-.27h1.23A8.34 8.34 0 0 1 12.41 14ZM19.89 14.11l-1.09 1.33c0 .06-.17.35.18.3a7.351 7.351 0 0 0 1.22-.29c.11 0 .07-.19-.11-.17-.18.02-.69.05-1 .11l.84-1.26s.07-.13-.04-.02ZM16.75 20.2a2.3 2.3 0 0 0 1.09-1c.28-.65 0-.91-.44-1a2.43 2.43 0 0 0-1.74.34c-.39.36-.34.72-.05 1a5.34 5.34 0 0 0 1.14.66Z"
-                fill="#000" />
-              <path
-                d="M16.35 21.45a1.92 1.92 0 0 1-.46.6 1.73 1.73 0 0 1-1 .38 2.15 2.15 0 0 1-1.47-.43 2.3 2.3 0 0 1-.53-.44c-.1-.11-.223-.2-.36-.26 0 0 .75 4.1 2.57 4.75 1.82.65 2.14-.75 2.2-1.13a5.61 5.61 0 0 0-.82-3.23c-.02-.31-.03-.11-.13-.24Z"
-                fill="#F06351" />
-              <path
-                d="M14.71 22.59a3.44 3.44 0 0 1-2.361-1.466.14.14 0 0 1 .031-.154.14.14 0 0 1 .2 0 3.26 3.26 0 0 0 2.11 1.3 2.09 2.09 0 0 0 1.63-1l.14-.19.1.21s.37.76 1 .8c.63.04 1.05-.41 1.61-1.28a.14.14 0 0 1 .2 0 .15.15 0 0 1 .05.2c-.64 1-1.27 1.44-1.88 1.4a1.549 1.549 0 0 1-1.12-.76 2.26 2.26 0 0 1-1.71.94Z"
-                fill="#000" />
-              <path
-                d="M26.24 18.92a58.634 58.634 0 0 0-5.07 5.19A31.633 31.633 0 0 1 15.88 29c-.22-.53-1.62-1.51-1.62-1.51s-3.13-2.14-5.18-3.82a34.139 34.139 0 0 1-3.13-3l-2-.11a22.57 22.57 0 0 0 12 8.8c.86-.14 3.27-1.86 5.07-3.26a58.13 58.13 0 0 0 5.94-5.89 6.15 6.15 0 0 0 1.14-2c-1.1.39-1.86.71-1.86.71Z"
-                fill="#F06351" />
-            </g>
-            <defs>
-              <clipPath id="a">
-                <path fill="#fff" d="M0 0h33.32v37.61H0z" />
-              </clipPath>
-            </defs>
-          </svg>
-        </div>
+      <a class="page-header__link" href="index.html">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.svg">
+          <img src="img/logo/logo-mobile.svg" alt="Cat energy">
+        </picture>
         <div class="page-header__link-logoname">
           <svg width="101" height="18" viewBox="0 0 128 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <rect width="128" height="24" fill="url(#pattern0)"/>
@@ -73,7 +49,7 @@
               </a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__item-link main-nav__item-link--form">
+              <a class="main-nav__item-link main-nav__item-link--current main-nav__item-link--form">
                 Подбор программы
               </a>
             </li>
@@ -113,19 +89,19 @@
         <fieldset class="form__group form__group--programs">
           <legend class="visually-hidden">Подбор программы</legend>
           <label class="form__group-label form__group-label--programs">
-            <input class="visually-hidden" type="radio" name="product-group">
+            <input class="visually-hidden form__group-input form__group-input--programs" type="radio" name="product-group">
             <span class="form__group-mark form__group-mark--programs"></span>
             Похудение
           </label>
 
           <label class="form__group-label form__group-label--programs">
-            <input class="visually-hidden" type="radio" name="product-group">
+            <input class="visually-hidden form__group-input form__group-input--programs" type="radio" name="product-group">
             <span class="form__group-mark form__group-mark--programs"></span>
             Набор массы
           </label>
 
           <label class="form__group-label form__group-label--programs">
-            <input class="visually-hidden" type="radio" name="product-group">
+            <input class="visually-hidden form__group-input form__group-input--programs" type="radio" name="product-group">
             <span class="form__group-mark form__group-mark--programs"></span>
             Не знаю (Нужен ваш совет)
           </label>
@@ -143,12 +119,23 @@
             <div class="form__group-row form__group-row--contact">
               <label class="form__group-label" for="email" >E-mail:*</label>
               <input class="form__group-input form__group-input--email" type="email"  id="email" name="email" placeholder="kuklachev@gmail.com">
-              <span class="form__group-icon form__group-icon--email"></span>
+              <span class="form__group-icon form__group-icon--email">
+                <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <line x1="1.65" y1="5.84766" x2="1.65" y2="13.8477" stroke="#222222" stroke-width="1.3"/>
+                  <line x1="18.65" y1="5.84766" x2="18.65" y2="13.8477" stroke="#222222" stroke-width="1.3"/>
+                  <line x1="1" y1="13.1977" x2="19" y2="13.1977" stroke="#222222" stroke-width="1.3"/>
+                  <line x1="1" y1="1.19766" x2="19" y2="1.19766" stroke="#222222" stroke-width="1.3"/>
+                  <path d="M18.35 3.02975L10 9.5242L1.65 3.02975V1.49766H4.5L10 1.49766H15H18.35V3.02975Z" stroke="#222222" stroke-width="1.3"/>
+                  </svg>
+              </span>
             </div>
             <div class="form__group-row form__group-row--contact">
               <label class="form__group-label" for="tel" >Телефон:*</label>
               <input class="form__group-input form__group-input--phone" type="tel"  id="tel" name="tel" placeholder="8 (960) 900-60-90">
-              <span class="form__group-icon form__group-icon--phone"></span>
+              <span class="form__group-icon form__group-icon--phone">
+                <svg width="20" height="21" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)" fill="#000">
+                  <path d="M17.9 9.753H9.4v1.204h8.5l-2.1 2.107.9.903 3.1-3.11a.754.754 0 0 0 0-.904l-3.1-3.11-.9.903 2.1 2.007ZM8.1 19.787v-6.221a.653.653 0 0 0-.6-.602H3.1a1.226 1.226 0 0 0 1.2 1.204h2.5v5.017H3.1a1.784 1.784 0 0 1-1.728-1.02 1.801 1.801 0 0 1-.172-.686V3.431a1.78 1.78 0 0 1 .483-1.25A1.767 1.767 0 0 1 2.9 1.624h3.9v5.017H4.4a1.218 1.218 0 0 0-1.2 1.204h4.4a.649.649 0 0 0 .6-.602V.923A.863.863 0 0 0 7.5.32H3.1a2.99 2.99 0 0 0-2.151.81A3.01 3.01 0 0 0 0 3.23v13.948a2.91 2.91 0 0 0 .772 2.192 2.89 2.89 0 0 0 2.128.919h4.6a.499.499 0 0 0 .6-.502Z"/></g><defs><clipPath id="a"><path fill="#fff" transform="translate(0 .32)" d="M0 0h20v20.069H0z"/></clipPath></defs></svg>
+              </span>
             </div>
           </div>
 
@@ -167,22 +154,22 @@
           </div>
           <div class="form__group-label-wrapper">
             <label class="form__group-label form__group-label--information">
-              <input class="visually-hidden" type="radio" name="product-group">
+              <input class="visually-hidden form__group-input form__group-input--information" type="checkbox" name="product-group">
               <span class="form__group-mark form__group-mark--information"></span>
               сахарозаменитель
             </label>
             <label class="form__group-label form__group-label--information">
-              <input class="visually-hidden" type="radio" name="product-group">
+              <input class="visually-hidden form__group-input form__group-input--information" type="checkbox" name="product-group">
               <span class="form__group-mark form__group-mark--information"></span>
               питьевая вода
             </label>
             <label class="form__group-label form__group-label--information">
-              <input class="visually-hidden" type="radio" name="product-group">
+              <input class="visually-hidden form__group-input form__group-input--information" type="checkbox" name="product-group">
               <span class="form__group-mark form__group-mark--information"></span>
               молоко
             </label>
             <label class="form__group-label form__group-label--information">
-              <input class="visually-hidden" type="radio" name="product-group">
+              <input class="visually-hidden form__group-input form__group-input--information" type="checkbox" name="product-group">
               <span class="form__group-mark form__group-mark--information"></span>
               витамины
             </label>
