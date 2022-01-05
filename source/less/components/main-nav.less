@@ -110,6 +110,7 @@
   text-decoration: none;
   color: @black;
   outline: none;
+  padding-bottom: 4px;
 
   &:hover {
     opacity: 0.6;
@@ -148,6 +149,7 @@
 }
 
 .main-nav__item-link--current {
+  border-bottom: 2px solid #68B738;
   &:hover {
     opacity: 1;
   }
@@ -159,16 +161,19 @@
   &:active {
     opacity: 1;
     color: @black;
-    border-bottom: none;
   }
 
   @media (min-width: @desktop-width) {
-
+    border-bottom: 2px solid @white;
     &:active {
       color: @white;
-      border-bottom: none;
     }
   }
+}
+
+.main-nav__item-link--form.main-nav__item-link--current,
+.main-nav__item-link--catalog.main-nav__item-link--current {
+  border-bottom: 2px solid #68B738;
 }
 
 .main-nav__item-link.main-nav__item-link--form,

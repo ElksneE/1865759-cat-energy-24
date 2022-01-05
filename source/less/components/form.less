@@ -3,7 +3,7 @@
   padding-bottom: 32px;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 70px;
+    padding-bottom: 83px;
   }
 }
 
@@ -21,6 +21,7 @@
 
   @media (min-width: @desktop-width) {
     width: 569px;
+    margin-bottom: 0;
   }
 }
 
@@ -53,6 +54,8 @@
 
   @media (min-width: @desktop-width) {
     width: 568px;
+    margin-bottom: 0;
+    padding: 23px 31px;
   }
 }
 
@@ -73,6 +76,7 @@
 
   @media (min-width: @tablet-width) {
     &::before {
+      top: 22px;
       left: -70px;
       width: 200%;
     }
@@ -91,7 +95,7 @@
   padding: 0;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 70px;
+    margin-bottom: 64px;
   }
 
   @media (min-width: @desktop-width) {
@@ -106,6 +110,10 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 73px;
   }
 }
 
@@ -141,6 +149,10 @@
   text-transform: uppercase;
   cursor: pointer;
 
+  &:hover .form__group-mark {
+    border: 1px solid #BABABA
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
@@ -159,8 +171,17 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 15px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
+.form__group-row--name {
+  @media (min-width: @desktop-width) {
+    margin-bottom: 17px;
+  }
+}
 .form__group-label--programs {
   display: flex;
   align-items: center;
@@ -184,18 +205,26 @@
   }
 }
 
-.form__group-label {
-  &:hover .form__group-mark {
-    border: 1px solid #BABABA
-  }
-
-  &:focus-within {
-    color: rgb(34, 34, 34, 0.3);
+.form__group-input--programs[type="radio"]:disabled{
+  &:disabled + .form__group-mark-wrapper {
     opacity: 0.3;
+  }
+  &:disabled + .form__group-mark-wrapper .form__group-mark {
+    color: rgb(34, 34, 34, 0.3);
   }
 }
 
-.form__group-input--programs[type="radio"]:checked + .form__group-mark--programs::before {
+
+.form__group-input--information[type="checkbox"]:disabled{
+  &:disabled + .form__group-mark-wrapper {
+    opacity: 0.3;
+  }
+  &:disabled + .form__group-mark-wrapper .form__group-mark {
+    color: rgb(34, 34, 34, 0.3);
+  }
+}
+
+.form__group-input--programs[type="radio"]:checked + .form__group-mark-wrapper .form__group-mark--programs::before {
   position: absolute;
   content: "";
   top: 7px;
@@ -265,7 +294,7 @@
     margin-left: -40px;
     margin-right: -40px;
     padding-left: 40px;
-    margin-bottom: 50px;
+    margin-bottom: 57px;
     padding-right: 40px;
   }
 }
@@ -310,7 +339,7 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
-    padding-left: 20px;
+    padding-left: 23px;
     padding-right: 40px;
   }
 }
@@ -323,17 +352,14 @@
   line-height: 18px;
   text-transform: uppercase;
   color: @darkgrey;
-  outline: none;
-  border: 1px solid #e7e7e7;
-  margin: 1px;
+  outline: 1px solid #e7e7e7;
 
   &:hover {
-    border: 1px solid #cdcdcd;
+    outline: 1px solid #cdcdcd;
   }
 
   &:focus {
-    margin: 0;
-    border: 2px solid @darkgrey;
+    outline: 2px solid @darkgrey;
   }
 
 
@@ -355,15 +381,14 @@
   @media (min-width: @tablet-width) {
     position: absolute;
     font-size: 20px;
-    bottom: 85px;
-    right: 40px;
+    bottom: 98px;
+    right: 168px;
   }
 
   @media (min-width: @desktop-width) {
     position: absolute;
     font-size: 20px;
-    bottom: 80px;
-    right: 496px;
+    right: 493px;
   }
 }
 
@@ -373,11 +398,11 @@
   background: @white;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 37px;
+    margin-bottom: 56px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 50px;
+    margin-bottom: 63px;
   }
 }
 
@@ -394,7 +419,7 @@
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 221px 221px 221px 221px;
-    row-gap: 104px;
+    column-gap: 104px;
   }
 }
 
@@ -411,21 +436,28 @@
   }
 }
 
-.form__group-input--information[type="checkbox"]:checked + .form__group-mark--information::before {
+.form__group-input--information[type="checkbox"]:checked + .form__group-mark-wrapper .form__group-mark--information::before {
   position: absolute;
   content: "";
-  top: 7px;
-  left: 7px;
+  top: 25%;
+  left: 25%;
   width: 18px;
   height: 14px;
   background-image: url("../img/icon/vector.svg");
   background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+
+    width: 24px;
+    height: 19px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .form-wrapper {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 67px;
   }
 }
 
@@ -453,7 +485,7 @@
   right: 40px;
 
   @media (min-width: @tablet-width) {
-    right: 90px;
+    right: 83px;
   }
 
   @media (min-width: @desktop-width) {
@@ -476,7 +508,7 @@
   right: 40px;
 
   @media (min-width: @tablet-width) {
-    right: 90px;
+    right: 83px;
   }
 
   @media (min-width: @desktop-width) {
@@ -494,3 +526,7 @@
   }
 }
 
+.form__group-mark-wrapper {
+  display: flex;
+  align-items: center;
+}
