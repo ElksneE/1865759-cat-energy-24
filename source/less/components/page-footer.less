@@ -98,21 +98,28 @@
 
 .page-footer__logo {
   margin-bottom: 31px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+   margin-bottom: 0;
+   align-self: center;
+  }
 }
 
 .page-footer__logo-link {
   display: block;
   margin: 0 auto;
-  background-image: url("../img/logo/logo-header-name.svg");
-  height: 24px;
-  width: 128px;
-  background-repeat: no-repeat;
+  outline: none;
 
   &:hover {
     opacity: 0.8;
   }
 
   &:active {
+    opacity: 0.6;
+  }
+
+  &:focus-visible {
     opacity: 0.6;
   }
 }
@@ -129,6 +136,8 @@
   border-top: 1px solid #d9d9d9;
 
   @media (min-width: @tablet-width) {
+    justify-content: start;
+    width: 120px;
     margin-bottom: 0;
     padding: 0;
     border: 0;
@@ -138,33 +147,40 @@
 .page-footer__social-link {
   text-decoration: none;
   color: @black;
+  outline: none;
+
+  & svg {
+    fill: #666;
+
+    &:hover {
+      fill:@green;
+    }
+
+    &:focus {
+      stroke: @green;
+    }
+
+    &:active {
+      stroke: @green;
+      opacity: 0.3;
+    }
+  }
+
 }
 
-.page-footer__social-link:hover path {
-  fill: @green;
-}
-
-.page-footer__social-link:active path {
-  fill: @green;
-  opacity: 0.3;
-}
-
-.page-footer__html-logo:hover path {
+.page-footer__html-logo {
+  &:hover path {
     fill: @green;
-}
+  }
 
-.page-footer__html-logo:active path {
-  fill: @green;
-  opacity: 0.3;
-}
+  &:focus path {
+    fill: @green;
+  }
 
-
-.page-footer__social-link--facebook:hover path {
-    stroke: @green;
-    fill: none;
-}
-.page-footer__social-link--facebook:active path {
-  opacity: 0.3;
+  &:active path {
+    fill: @green;
+    opacity: 0.3;
+  }
 }
 
 .page-footer__social-item {
@@ -172,6 +188,11 @@
 
   &:last-child {
     margin-right: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+   display: flex;
+   align-items: center;
   }
 }
 
@@ -198,6 +219,15 @@
   text-decoration: none;
   display: flex;
   justify-content: space-between;
+  outline: none;
+
+  &:hover .page-footer__html-logo path {
+    fill: @green;
+  }
+
+  &:focus .page-footer__html-logo path {
+    fill: @green;
+  }
 
   &:active {
     opacity: 0.3;
@@ -208,6 +238,7 @@
   position: relative;
   overflow: hidden;
   height: 362px;
+  outline: none;
 
   &::before {
     position: absolute;
@@ -233,3 +264,44 @@
     padding: 60px 70px;
   }
 }
+
+.page-footer__social-link--vcontacte svg {
+  @media (min-width: @tablet-width) {
+   width: 29px;
+   height: 17px;
+  }
+}
+
+
+.page-footer__social-link--instagram svg {
+  @media (min-width: @tablet-width) {
+   width: 23px;
+   height: 23px;
+  }
+}
+
+
+.page-footer__social-link--facebook {
+  & svg{
+    stroke: #666;
+
+    @media (min-width: @tablet-width) {
+      width: 28px;
+      height: 27px;
+    }
+  }
+
+  &:hover svg{
+    stroke: @green;
+  }
+
+  &:focus svg {
+    stroke: @green;
+  }
+
+  &:active svg{
+    stroke: @green;
+    opacity: 0.3;
+  }
+}
+

@@ -1,5 +1,4 @@
 .form {
-  position: relative;
   padding-bottom: 32px;
 
   @media (min-width: @tablet-width) {
@@ -8,7 +7,7 @@
 }
 
 .form__group {
-  padding: 0;
+  margin: 0;
   border: none;
 }
 
@@ -59,43 +58,31 @@
   }
 }
 
-.form__group-title-wrapper {
+.form__group--contact {
   position: relative;
   z-index: 1;
+  margin-bottom: 17px;
+  background: @white;
 
-  &::before {
+   &::before {
     position: absolute;
     content: "";
     z-index: -1;
     background: #68B738;
     width: 100%;
     height: 2px;
-    top: 15px;
-    right: -20px;
+    top: -70px;
+    right: 0;
+    left: 20px;
   }
-
-  @media (min-width: @tablet-width) {
-    &::before {
-      top: 22px;
-      left: -70px;
-      width: 200%;
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    &::before {
-      left: -110px;
-    }
-  }
-}
-
-.form__group--contact {
-  margin-bottom: 17px;
-  background: @white;
-  padding: 0;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 64px;
+
+    &::before {
+      left:0;
+      top:-92px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -105,11 +92,30 @@
 }
 
 .form__group--comment {
+  position: relative;
+  z-index: 1;
   margin-bottom: 25px;
   background: @white;
 
+  &::before {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    background: #68B738;
+    width: 100%;
+    height: 2px;
+    top: -48px;
+    right: 0;
+    left: 20px;
+  }
+
   @media (min-width: @tablet-width) {
     margin-bottom: 65px;
+
+    &::before {
+      left: 0;
+      top: -92px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -150,7 +156,11 @@
   cursor: pointer;
 
   &:hover .form__group-mark {
-    border: 1px solid #BABABA
+    border: 1px solid #BABABA;
+  }
+
+  &:focus-within .form__group-mark {
+    border: 2px solid #444444;
   }
 
   @media (min-width: @tablet-width) {
@@ -381,7 +391,7 @@
   @media (min-width: @tablet-width) {
     position: absolute;
     font-size: 20px;
-    bottom: 98px;
+    bottom: 16px;
     right: 168px;
   }
 
@@ -394,11 +404,30 @@
 
 .form__group--information {
   position: relative;
+  z-index: 1;
   margin-bottom: 30px;
   background: @white;
 
+  &::before {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    background: #68B738;
+    width: 100%;
+    height: 2px;
+    top: -48px;
+    right: 0;
+    left: 20px;
+  }
+
+
   @media (min-width: @tablet-width) {
     margin-bottom: 56px;
+
+    &::before {
+      left: 0;
+      top:-72px
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -529,4 +558,8 @@
 .form__group-mark-wrapper {
   display: flex;
   align-items: center;
+}
+
+.form__group-button-wrapper {
+  position: relative;
 }

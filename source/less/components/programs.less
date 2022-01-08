@@ -283,7 +283,6 @@
   @media (min-width: @desktop-width) {
     padding-left: 163px;
     margin-bottom: 74px;
-
   }
 }
 
@@ -316,6 +315,11 @@
   color: @black;
 
   &:active {
+    opacity: 0.3;
+  }
+
+  &:focus-visible {
+    outline: none;
     opacity: 0.3;
   }
 }
@@ -358,18 +362,14 @@
 }
 
 .programs__article-img-wrapper {
-  background-image: url("../img/articles/arrow.svg");
-  width: 24px;
-  height: 12px;
   align-self: center;
 }
 
-.programs__article-link:hover .programs__article-img-wrapper {
-  background-image: url("../img/articles/arrow-hover.svg");
+.programs__article-link:hover svg {
   width: 32px;
   height: 12px;
-  align-self: center;
 }
+
 .programs__inner {
   margin-bottom: 20px;
 

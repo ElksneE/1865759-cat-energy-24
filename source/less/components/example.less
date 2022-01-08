@@ -206,6 +206,7 @@
   padding-bottom: 6px;
   text-transform: uppercase;
   border-bottom: dotted 1px rgb(0, 0, 0, 0.4);
+  outline: none;
 
   &:hover {
     border-bottom: 1px solid rgb(0, 0, 0, 0.4);
@@ -213,7 +214,7 @@
   &:active {
     border-bottom: none;
   }
-  }
+}
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -249,9 +250,14 @@
   border-radius: 6px;
   cursor: pointer;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16);
+  outline: none;
 
   &:hover {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.19);
+  }
+  &:active {
+    border: 1px solid #68B738;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
   }
 
   @media (min-width: @tablet-width) {
@@ -263,11 +269,6 @@
     background-color: @white;
     border: 1px solid #CDCDCD;
   }
-}
-
-.example__toggle-button:active {
-  border: 1px solid #68B738;
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 .example__slider-img {
