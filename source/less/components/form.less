@@ -503,23 +503,17 @@
   }
 }
 
-@media (min-width: @desktop-width) {
-  .form__group-row--contact {
-   width: 562px;
-}
+.form__group-row--contact {
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+     width: 562px;
+  }
 }
 
 .form__group-icon--email {
   position: absolute;
-  right: 40px;
-
-  @media (min-width: @tablet-width) {
-    right: 83px;
-  }
-
-  @media (min-width: @desktop-width) {
-    left: 625px;
-  }
+  right: 20px;
 }
 
 .form__group-input--email {
@@ -534,15 +528,7 @@
 
 .form__group-icon--phone {
   position: absolute;
-  right: 40px;
-
-  @media (min-width: @tablet-width) {
-    right: 83px;
-  }
-
-  @media (min-width: @desktop-width) {
-    right:130px;
-  }
+  right: 20px;
 }
 
 .form__group-input--phone {
