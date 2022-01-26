@@ -18,7 +18,7 @@
 
   <svg style="display: none">
 
-    <symbol viewBox="0 0 101 19" id="html academy">
+    <symbol viewBox="0 0 101 19" id="html-academy">
       <g clip-path="url(#clip0_135_3750)">
       <path d="M1.26449 17.3592C0.36955 16.0926 -0.0747041 14.5739 1.02073e-05 13.0367V6.63014C-0.108365 5.07639 0.308071 3.53082 1.18546 2.23044C2.05478 1.227 3.39829 0.76387 5.37403 0.76387C7.34978 0.76387 8.61425 1.227 9.40455 2.07606C10.2626 3.15147 10.6846 4.49803 10.59 5.85826V7.40202H6.71754V5.6267C6.74881 5.10163 6.66808 4.57594 6.48045 4.08294C6.38016 3.88394 6.2212 3.7188 6.02403 3.60876C5.82686 3.49871 5.60049 3.4488 5.37403 3.46544C4.82082 3.46544 4.42568 3.61982 4.26762 4.00576C4.08883 4.55419 4.00862 5.12872 4.03053 5.70389V13.963C3.98879 14.521 4.0978 15.08 4.34665 15.5839C4.5047 15.9699 4.89985 16.1242 5.45306 16.1242C6.00627 16.1242 6.32239 15.9699 6.48045 15.5839C6.66013 15.0623 6.74049 14.5129 6.71754 13.963V12.1105H10.59V13.6542C10.6704 15.0366 10.2508 16.4027 9.40455 17.5136C8.61425 18.4399 7.27075 18.903 5.37403 18.903C3.47732 18.8258 2.05478 18.3627 1.26449 17.3592Z" fill="#111111"/>
       <path d="M15.2527 0.995731H19.7574L23.0767 18.5945H19.4413L18.8091 14.8895H16.2011L15.5689 18.5945H11.8545L15.2527 0.995731ZM18.493 12.5739L17.5446 5.70418L16.5963 12.5739H18.493Z" fill="#111111"/>
@@ -101,7 +101,7 @@
     </div>
 
     <!-- Форма -->
-    <form class="form" action="">
+    <form class="form" action="#">
       <!-- Форма контактные данные -->
       <div class="form-wrapper container-form">
         <!-- Форма ФИО -->
@@ -112,7 +112,7 @@
             <input class="form__group-input" type="text" id="name" name="name" placeholder="Барсик">
           </div>
           <div class="form__group-row form__group-row--name">
-            <label class="form__group-label" for="weight" class="form__label">Вес (кг):*</label>
+            <label class="form__group-label" for="weight">Вес (кг):*</label>
             <input class="form__group-input" type="text" id="weight" name="weight" placeholder="7">
           </div>
 
@@ -125,34 +125,23 @@
         <fieldset class="form__group form__group--programs">
           <legend class="visually-hidden">Подбор программы</legend>
           <label class="form__group-label form__group-label--programs">
-            <input class="visually-hidden form__group-input form__group-input--programs" type="radio"
-              name="product-group">
-            <div class="form__group-mark-wrapper">
+            <input class="visually-hidden form__group-input form__group-input--programs" type="radio" name="product-group">
               <span class="form__group-mark form__group-mark--programs"></span>
               Похудение
-            </div>
           </label>
 
           <label class="form__group-label form__group-label--programs">
-            <input class="visually-hidden form__group-input form__group-input--programs" type="radio"
-            name="product-group">
-            <div class="form__group-mark-wrapper">
+            <input class="visually-hidden form__group-input form__group-input--programs" type="radio" name="product-group">
               <span class="form__group-mark form__group-mark--programs"></span>
               Набор массы
-            </div>
           </label>
 
           <label class="form__group-label form__group-label--programs">
-            <input class="visually-hidden form__group-input form__group-input--programs" type="radio"
-              name="product-group">
-            <div class="form__group-mark-wrapper">
+            <input class="visually-hidden form__group-input form__group-input--programs" type="radio" name="product-group">
               <span class="form__group-mark form__group-mark--programs"></span>
               Не знаю (Нужен ваш совет)
-            </div>
           </label>
-
         </fieldset>
-
       </div>
 
       <!-- Форма контактные данные -->
@@ -197,9 +186,7 @@
       </fieldset>
       <!-- Форма комментарий -->
       <fieldset class="form__group form__group--comment container-form">
-
-          <legend class="form__group-title form__group-title--comment">Комментарий</legend>
-
+        <legend class="form__group-title form__group-title--comment">Комментарий</legend>
         <textarea class="form__group-description" name="comment" id="comment" cols="30" rows="7"
           placeholder="Расскажите обо всех повАдках кота"></textarea>
       </fieldset>
@@ -208,35 +195,24 @@
         <legend class="form__group-title form__group-title--information">Дополнительно</legend>
         <div class="form__group-label-wrapper">
           <label class="form__group-label form__group-label--information">
-            <input class="visually-hidden form__group-input form__group-input--information" type="checkbox"
-              name="product-group">
-              <div class="form__group-mark-wrapper">
-                <span class="form__group-mark form__group-mark--information"></span>
-                сахарозаменитель
-              </div>
-          </label>
-          <label class="form__group-label form__group-label--information">
-            <input class="visually-hidden form__group-input form__group-input--information" type="checkbox"
-              name="product-group">
-              <div class="form__group-mark-wrapper">
-                <span class="form__group-mark form__group-mark--information"></span>
-                питьевая вода
-              </div>
+            <input class="visually-hidden form__group-input form__group-input--information" type="checkbox" name="product-group">
+              <span class="form__group-mark form__group-mark--information"></span>
+              сахарозаменитель
           </label>
           <label class="form__group-label form__group-label--information">
             <input class="visually-hidden form__group-input form__group-input--information" type="checkbox" name="product-group">
-              <div class="form__group-mark-wrapper">
-                <span class="form__group-mark form__group-mark--information"></span>
-                молоко
-              </div>
+              <span class="form__group-mark form__group-mark--information"></span>
+              питьевая вода
           </label>
           <label class="form__group-label form__group-label--information">
-            <input class="visually-hidden form__group-input form__group-input--information" type="checkbox"
-              name="product-group">
-            <div class="form__group-mark-wrapper">
+            <input class="visually-hidden form__group-input form__group-input--information" type="checkbox" name="product-group">
+              <span class="form__group-mark form__group-mark--information"></span>
+              молоко
+          </label>
+          <label class="form__group-label form__group-label--information">
+            <input class="visually-hidden form__group-input form__group-input--information" type="checkbox" name="product-group">
               <span class="form__group-mark form__group-mark--information"></span>
               витамины
-            </div>
           </label>
         </div>
       </fieldset>
@@ -262,10 +238,7 @@
         <p>Санкт-Петербург</p>
       </div>
     </div>
-    <div class="page-footer__map" tabindex="-1">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002576!2d30.320858715384226!3d59.938719169055055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2s!4v1639408929780!5m2!1sru!2s"
-        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <div id="map" class="page-footer__map">
     </div>
     <div class="page-footer__social-wrapper">
       <div class="page-footer__social container">
@@ -320,22 +293,9 @@
       </div>
     </div>
   </footer>
-  <script>
-    var navMain = document.querySelector('.main-nav');
-    var navToggle = document.querySelector('.main-nav__toggle');
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+  <script src="./js/app.js"></script>
 
-    navMain.classList.remove('main-nav--nojs');
-
-    navToggle.addEventListener('click', function () {
-      if (navMain.classList.contains('main-nav--closed')) {
-        navMain.classList.remove('main-nav--closed');
-        navMain.classList.add('main-nav--opened');
-      } else {
-        navMain.classList.add('main-nav--closed');
-        navMain.classList.remove('main-nav--opened');
-      }
-    });
-  </script>
 
 </body>
 
