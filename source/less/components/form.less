@@ -177,10 +177,6 @@
     border: 1px solid #bababa;
   }
 
-  &:focus-within .form__group-mark {
-    border: 2px solid #444444;
-  }
-
   @media (min-width: @tablet-width) {
     margin-right: 17px;
     font-size: 20px;
@@ -222,12 +218,12 @@
 .form__group-mark {
   position: relative;
   display: inline-block;
-  width: 30px;
+  min-width: 30px;
   height: 30px;
   border: 1px solid #cdcdcd;
 
   @media (min-width: @tablet-width) {
-    width: 40px;
+    min-width: 40px;
     height: 40px;
   }
 }
@@ -289,6 +285,7 @@
 }
 
 .form__group-title {
+  position: relative;
   display: block;
   margin: 0 0 28px -20px;
   padding: 0 0 0 20px;
@@ -521,12 +518,14 @@
   }
 }
 
-@media (min-width: @desktop-width) {
-  .form__group-row-wrapper {
+.form__group-row-wrapper {
+  @media (min-width: @desktop-width) {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 }
+
 
 .form__group-row--contact {
   position: relative;
