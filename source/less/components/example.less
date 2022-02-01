@@ -22,7 +22,7 @@
     background-color: @white;
 
     &::before {
-      top: 615px;
+      top: 572px;
     }
   }
 
@@ -157,6 +157,15 @@
     font-size: 20px;
     line-height: 20px;
   }
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+    margin-right: 56px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .example__statistics-column-wrapper {
@@ -170,7 +179,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 48px;
+    margin-bottom: 52px;
   }
 }
 
@@ -226,19 +235,6 @@
   align-self: center;
 }
 
-@media (min-width: @tablet-width) {
-  .example__toggle-button::before {
-    position: absolute;
-    content: "";
-    top: 12px;
-    left: 12px;
-    width: 8px;
-    height: 8px;
-    background-color: @green;
-    border-radius: 50%;
-  }
-}
-
 .example__toggle-button {
   position: absolute;
   left: 2px;
@@ -249,10 +245,15 @@
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  text-indent: -3000px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
   outline: none;
 
   &:hover {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  }
+
+  &:focus {
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
   }
 
@@ -269,6 +270,17 @@
     border-radius: 50%;
     background-color: @white;
     border: 1px solid #cdcdcd;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 12px;
+      left: 12px;
+      width: 8px;
+      height: 8px;
+      background-color: @green;
+      border-radius: 50%;
+    }
   }
 }
 

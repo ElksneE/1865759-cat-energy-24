@@ -5,17 +5,17 @@
 .page-footer__contacts {
   display: flex;
   justify-content: space-between;
-  padding-top: 28px;
+  padding-top: 20px;
   padding-bottom: 28px;
   background: @basicgrey;
 
   @media (min-width: @tablet-width) {
-    padding: 50px 72px 52px;
+    padding: 59px 72px 52px;
   }
 
   @media (min-width: @desktop-width) {
     position: absolute;
-    padding: 39px 27px 59px 76px;
+    padding: 54px 34px 59px 76px;
     top: 117px;
     right: 813px;
     z-index: 1;
@@ -100,7 +100,7 @@
 }
 
 .page-footer__logo {
-  margin-bottom: 27px;
+  margin-bottom: 35px;
   text-align: center;
 
   @media (min-width: @tablet-width) {
@@ -119,6 +119,10 @@
     opacity: 0.8;
   }
 
+  &:focus {
+    opacity: 0.8;
+  }
+
   &:active {
     opacity: 0.6;
   }
@@ -134,7 +138,7 @@
   margin: 0;
   padding: 19px 0;
   list-style-type: none;
-  margin-bottom: 22px;
+  margin-bottom: 17px;
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #d9d9d9;
 
@@ -266,18 +270,60 @@
   }
 }
 
-.page-footer__social-link--vcontacte svg {
-  @media (min-width: @tablet-width) {
-    width: 35px;
-    height: 33px;
+.page-footer__social-link--vcontacte {
+  & svg {
+    fill: #666666;
+    stroke: #666666;
+    stroke-width: 0.2px;
+
+    @media (min-width: @tablet-width) {
+      width: 35px;
+      height: 33px;
+    }
+  }
+
+  &:hover svg {
+    stroke: @green;
+    fill: @green;
+  }
+
+  &:focus svg {
+    stroke: @green;
+    fill: @green;
+  }
+
+  &:active svg {
+    stroke: @green;
+    fill: @green;
+    opacity: 0.3;
   }
 }
 
+.page-footer__social-link--instagram {
+  & svg {
+    stroke: #666666;
+    fill: #666666;
+    stroke-width: 0.1px;
 
-.page-footer__social-link--instagram svg {
-  @media (min-width: @tablet-width) {
-    width: 23px;
-    height: 23px;
+    @media (min-width: @tablet-width) {
+      width: 23px;
+      height: 23px;
+    }
+  }
+
+  &:hover svg {
+    stroke: @green;
+    fill: @green;
+  }
+
+  &:focus svg {
+    stroke: @green;
+    fill: @green;
+  }
+
+  &:active svg {
+    stroke: @green;
+    opacity: 0.3;
   }
 }
 

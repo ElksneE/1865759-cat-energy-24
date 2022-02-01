@@ -126,12 +126,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 50%;
+    width: 570px;
     padding: 82px 49px 55px;
-
-    &:first-child {
-      margin-right: 80px;
-    }
   }
 }
 
@@ -171,8 +167,8 @@
   height: 28px;
   background-image: url("../img/articles/cat-pro.svg");
   background-size: 100% auto;
-  top: 5px;
-  right: -5px;
+  top: 12px;
+  right: -8px;
 
   @media (min-width: @tablet-width) {
     width: 268px;
@@ -187,12 +183,6 @@
     height: 56px;
     top: 22px;
     right: -10px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .programs__article--slim {
-    margin-right: 80px;
   }
 }
 
@@ -365,12 +355,14 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 56px;
+    margin-bottom: 50px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .programs__article-wrapper {
     display: flex;
+    flex-wrap: wrap;
+    column-gap: 80px;
   }
 }
